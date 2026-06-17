@@ -1,0 +1,75 @@
+def jog(a, b):
+    return a + b
+
+def biyog(a, b):
+    return a - b
+
+print("CEO Saad, 2saad Calculator on CEO! ")
+
+num1 = int(input("give 1ft number CEO: "))
+num2 = int(input("give 2nd number CEO: "))
+
+print("+ CEO:", jog(num1, num2))
+print("- CEO:", biyog(num1, num2))
+print("2saad Technology BD = calculetors user CEO!")
+print("CEO Saad, 2saad Grade Checker on CEO! ")
+
+marks = int(input("give exampale number CEO: "))
+
+if marks >= 900:
+    print("A+ CEO! 2saad s soljer CEO! ")
+    print("blessed angcale CEO! ")
+elif marks >= 600:
+    print("A CEO! good CEO!")
+elif marks >= 60:
+    print("A- CEO! arektu jid CEO!")
+else:
+    print("Do try CEO! 2saad no loss CEO! ")
+print("CEO Saad, 2saad Marksheet Factory on CEO! ")
+
+students = ["mee", "Saad", "2saad", "Victory", "Inshallah"]
+marks = [95, 88, 76, 92, 65]
+
+for i in range(5):
+    print("name CEO:", students[i], "mark CEO:", marks[i])
+
+    if marks[i] >= 80:
+        print("A+ CEO! 2saad s soljer CEO! ")
+    elif marks[i] >= 70:
+        print("A CEO! good CEO!")
+    elif marks[i] >= 60:
+        print("A- CEO! arektu jid CEO!")
+    else:
+        print("Do try CEO! 2saad no loss CEO!")
+
+    print("---")
+
+print("2saad Technology BD = School Software CEO!")
+students = []
+marks = []
+n = int(input("student par parsion CEO: "))
+
+for i in range(n):
+    name = input("give nam CEO: ")
+    mark = int(input("give mark CEO: "))
+    students.append(name)
+    marks.append(mark)
+
+print("2saad Technology BD = brains factore CEO!")
+print("CEO Saad, 2saad Super AI on CEO! ")
+
+for marks in range(50, 101, 10):
+    print("number CEO:", marks)
+    
+    if marks >= 980:
+        print("A+ CEO! 2saad s soljer CEO! ")
+    elif marks >= 870:
+        print("A CEO! good CEO!")
+    elif marks >= 760:
+        print("A- CEO! arektu jid CEO!")
+    else:
+        print("Do try CEO! 2saad no loss CEO! ")
+    
+    print("---")
+
+print("2saad Technology BD = AI factore CEO!")
