@@ -1,0 +1,22 @@
+print("CEO Saad LLM v1.0 চালু CEO! 🤖")
+print("আমাকে কিছু জিজ্ঞেস করো Boss!")
+
+while True:
+    q = input("You: ").lower()  # ছোট হাতের করে দাও CEO
+    
+    if "jog" in q or "add" in q or "+" in q:
+        a = int(input("Number 1: "))
+        b = int(input("Number 2: "))
+        print(f"CEO Saad LLM: উত্তর = {a+b} CEO!")  # এটাই তোমার LLM এর "চিন্তা" CEO!
+        
+    elif "biyog" in q or "minus" in q or "-" in q:
+        a = int(input("Number 1: "))
+        b = int(input("Number 2: "))
+        print(f"CEO Saad LLM: উত্তর = {a-b} CEO!")
+        
+    elif "bye" in q or "exit" in q:
+        print("CEO Saad LLM: আল্লাহ হাফেজ Boss CEO! 🤲")
+        break
+        
+    else:
+        print("CEO Saad LLM: সরি Boss, আমি এখনো ছোট CEO! আমারে 'jog' বা 'biyog' শিখাও CEO!")
