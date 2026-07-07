@@ -1,0 +1,326 @@
+BUG HELPER V4 Core System Stable"""
+=========================================
+BUG HELPER V4 PROFESSIONAL EDITION
+Author : Saad Hasan
+Version : 4.0
+=========================================
+"""
+
+from database import load_database
+
+from search import (
+    search_error,
+    search_by_category,
+    search_by_description
+)
+
+from manager import (
+    add_error,
+    edit_error,
+    delete_error
+)
+
+from statistics import get_statistics
+
+from history import (
+    save_history,
+    show_history
+)
+
+from backup import backup_database
+from restore import restore_database
+
+from favorite import (
+    add_favorite,
+    show_favorites,
+    remove_favorite
+)
+
+from about import show_about
+from language import set_language
+
+from utils import (
+    print_title,
+    print_separator,
+    pause
+)
+
+
+def show_menu():
+
+    print_title()
+
+    print("1. Search Error")
+    print("2. Search by Category")
+    print("3. Search by Description")
+    print("4. Add Error")
+    print("5. Edit Error")
+    print("6. Delete Error")
+    print("7. Search History")
+    print("8. Statistics")
+    print("9. Backup Database")
+    print("10. Restore Database")
+    print("11. Add Favorite")
+    print("12. Show Favorites")
+    print("13. Remove Favorite")
+    print("14. Change Language")
+    print("15. About")
+    print("16. Exit")
+
+    print_separator()
+
+
+def main():
+
+    while True:
+
+        database = load_database()
+        errors = database.get("errors", {})
+
+        show_menu()
+
+        print(f"\n📚 Total Errors : {len(errors)}")
+
+        choice = input("\nSelect Option : ").strip()
+                # =============================
+        # Search Error
+        # =============================
+        if choice == "1":
+
+            error_name = input("\nEnter Error Name : ").strip()
+
+            result = search_error(error_name)
+
+            if result:
+
+                print_separator()
+                print("✅ Error Found")
+                print_separator()
+
+                print(f"Name        : {error_name}")
+                print(f"Category    : {result['category']}")
+                print(f"Description : {result['description']}")
+
+                save_history(error_name)
+
+            else:
+                print("\n❌ Error Not Found.")
+
+            pause()
+
+        # =============================
+        # Search by Category
+        # =============================
+        elif choice == "2":
+
+            category = input("\nEnter Category : ").strip()
+
+            results = search_by_category(category)
+
+            if results:
+
+                print_separator()
+
+                for name, info in results.items():
+
+                    print(f"\n🐞 {name}")
+                    print(f"Category    : {info['category']}")
+                    print(f"Description : {info['description']}")
+
+            else:
+                print("\n❌ No Errors Found.")
+
+            pause()
+
+        # =============================
+        # Search by Description
+        # =============================
+        elif choice == "3":
+
+            keyword = input("\nEnter Keyword : ").strip()
+
+            results = search_by_description(keyword)
+
+            if results:
+
+                print_separator()
+
+                for name, info in results.items():
+
+                    print(f"\n🐞 {name}")
+                    print(f"Category    : {info['category']}")
+                    print(f"Description : {info['description']}")
+
+            else:
+                print("\n❌ No Errors Found.")
+
+            pause()
+
+        # =============================
+        # Add Error
+        # =============================
+        elif choice == "4":
+
+            name = input("Enter Error Name : ").strip()
+            category = input("Enter Category : ").strip()
+            description = input("Enter Description : ").strip()
+
+            if add_error(name, category, description):
+                print("\n✅ Error Added Successfully.")
+            else:
+                print("\n❌ Error Already Exists.")
+
+            pause()
+
+        # =============================
+        # Edit Error
+        # =============================
+        elif choice == "5":
+
+            name = input("Enter Error Name : ").strip()
+            category = input("New Category : ").strip()
+            description = input("New Description : ").strip()
+
+            if edit_error(name, category, description):
+                print("\n✅ Error Updated Successfully.")
+            else:
+                print("\n❌ Error Not Found.")
+
+            pause()
+
+        # =============================
+        # Delete Error
+        # =============================
+        elif choice == "6":
+
+            name = input("Enter Error Name : ").strip()
+
+            if delete_error(name):
+                print("\n✅ Error Deleted Successfully.")
+            else:
+                print("\n❌ Error Not Found.")
+
+            pause()
+                    # =============================
+        # Search History
+        # =============================
+        elif choice == "7":
+
+            show_history()
+            pause()
+
+        # =============================
+        # Statistics
+        # =============================
+        elif choice == "8":
+
+            stats = get_statistics()
+
+            print_separator()
+            print("📊 BUG HELPER STATISTICS")
+            print_separator()
+
+            print(f"Total Errors : {stats['total_errors']}")
+
+            print("\nCategories:")
+
+            for category, count in stats["categories"].items():
+                print(f"• {category} : {count}")
+
+            pause()
+
+        # =============================
+        # Backup Database
+        # =============================
+        elif choice == "9":
+
+            if backup_database():
+                print("\n✅ Database Backup Created Successfully.")
+            else:
+                print("\n❌ Backup Failed.")
+
+            pause()
+
+        # =============================
+        # Restore Database
+        # =============================
+        elif choice == "10":
+
+            if restore_database():
+                print("\n✅ Database Restored Successfully.")
+            else:
+                print("\n❌ Backup File Not Found.")
+
+            pause()
+
+        # =============================
+        # Add Favorite
+        # =============================
+        elif choice == "11":
+
+            error_name = input("\nEnter Error Name : ").strip()
+
+            if add_favorite(error_name):
+                print("\n⭐ Added to Favorites.")
+            else:
+                print("\n❌ Already in Favorites.")
+
+            pause()
+
+        # =============================
+        # Show Favorites
+        # =============================
+        elif choice == "12":
+
+            show_favorites()
+            pause()
+
+        # =============================
+        # Remove Favorite
+        # =============================
+        elif choice == "13":
+
+            error_name = input("\nEnter Error Name : ").strip()
+
+            if remove_favorite(error_name):
+                print("\n✅ Removed from Favorites.")
+            else:
+                print("\n❌ Error Not Found.")
+
+            pause()
+
+        # =============================
+        # Change Language
+        # =============================
+        elif choice == "14":
+
+            set_language()
+            pause()
+
+        # =============================
+        # About
+        # =============================
+        elif choice == "15":
+
+            show_about()
+            pause()
+
+        # =============================
+        # Exit
+        # =============================
+        elif choice == "16":
+
+            print("\n👋 Thank you for using BUG HELPER V4.")
+            break
+
+        # =============================
+        # Invalid Option
+        # =============================
+        else:
+
+            print("\n❌ Invalid Option.")
+            pause()
+
+
+if __name__ == "__main__":
+    main()
