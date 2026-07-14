@@ -12,7 +12,7 @@ Currently developing PyMedic AI — an offline Python Engineering Assistant.
 
 ## Mission
 
-Build intelligent software technologies that help engineers around the world.
+Building intelligent software tools that help engineers solve problems faster and work more efficiently.
 
 ---
 
