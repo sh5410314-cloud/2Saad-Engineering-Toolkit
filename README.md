@@ -1,15 +1,45 @@
-# 2saad Technology BD
+# 👋 Welcome to Saad Muhammad Technology
 
-Founder: Saad Muhammad Hasan
+## Founder
+Saad Muhammad Hasan
 
-Mission:
-To build software technologies that help engineers around the world.
+## About
 
-First Project:
-Universal Engineering Assistant
+Self-Taught Software Developer from Bangladesh.
 
-Built using:
+I build software that helps engineers, programmers and students solve problems faster.
+
+---
+
+## Mission
+
+Build intelligent software technologies that help engineers around the world.
+
+---
+
+## Current Project
+
+🚀 PyMedic AI
+
+Python Engineering Assistant
+
+---
+
+## Skills
+
 - Python
+- Git
+- GitHub
 - Pydroid 3
 - Termux
-- GitHub
+
+---
+
+## Future Goals
+
+🏥 PyMedic AI
+🐞 Bug Doctor
+💻 Terminal Assistant
+📚 Python Snippets
+🤖 Robotics Toolkit
+⚙ Universal Engineering Assistant
