@@ -25,12 +25,21 @@ Python Engineering Assistant
 ---
 
 ## Skills
+Python
 
-- Python
-- Git
-- GitHub
-- Pydroid 3
-- Termux
+Git
+
+GitHub
+
+Pydroid 3
+
+Termux
+
+Kivy
+
+AI Development
+
+Problem Solving
 
 ---
 
