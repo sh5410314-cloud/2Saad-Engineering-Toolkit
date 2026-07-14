@@ -50,4 +50,20 @@ Problem Solving
 💻 Terminal Assistant
 📚 Python Snippets
 🤖 Robotics Toolkit
+⚙ Universal Engineering assistant 
+
+2026
+
+✅ PyMedic AI
+
+2027
+
+🤖 Robotics Toolkit
+
+2028
+
 ⚙ Universal Engineering Assistant
+
+Future
+
+🌍 Open Source Engineering Platform
