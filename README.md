@@ -1,13 +1,12 @@
-# 👋 Welcome to Saad Muhammad Technology
+# 👋 Welcome to 2Saad Technology
 
 ## Founder
 Saad Muhammad Hasan
 
 ## About
+I build intelligent software tools that help engineers, programmers and students solve problems faster.
 
-Self-Taught Software Developer from Bangladesh.
-
-I build software that helps engineers, programmers and students solve problems faster.
+Currently developing PyMedic AI — an offline Python Engineering Assistant.
 
 ---
 
